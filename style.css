@@ -1,24 +1,27 @@
+/* Общие стили */
 body {
     margin: 0;
     padding: 0;
     font-size: 18px;
-    color: var(--tg-theme-text-color);
-    background: var(--tg-theme-bg-color);
+    color: var(--tg-theme-text-color, #000); /* Черный текст по умолчанию */
+    background: var(--tg-theme-bg-color, #fff); /* Белый фон по умолчанию */
 }
 
+/* Контейнер */
 .container {
-    width: 100%; /* Устанавливаем ширину на 100% для адаптивности */
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 10px;
+    max-width: 400px; /* Ширина для телефона */
+    margin: 0 auto; /* Центрирование */
+    padding: 0 10px; /* Отступ для маленьких экранов */
 }
 
-.inner {
+/* Продукты в два ряда */
+.products {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Два товара в ряд */
-    grid-gap: 10px;
+    grid-gap: 10px; /* Пробелы между товарами */
 }
 
+/* Стили для каждого продукта */
 .product {
     text-align: center;
     background: white;
@@ -28,10 +31,11 @@ body {
 }
 
 .product-img {
-    width: 100px;
+    width: 100px; /* Размер изображения */
     height: auto;
 }
 
+/* Кнопка */
 .btn, .quantity-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -41,7 +45,7 @@ body {
     color: #fff;
     text-transform: uppercase;
     font-weight: 700;
-    transition: background .2s linear;
+    transition: background 0.2s linear;
 }
 
 .btn:hover {
@@ -55,34 +59,32 @@ body {
     font-size: 18px;
 }
 
+/* Отображение количества */
 .quantity-display {
     display: inline-block;
     margin: 5px 10px;
     font-weight: bold;
 }
 
-.usercard {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.cart-img {
-    width: 50px;
-    height: auto;
-}
-
-/* Адаптивные стили */
+/* Адаптивные стили для мобильных устройств */
 @media (max-width: 768px) {
-    .inner {
-        grid-template-columns: 1fr; /* Один товар в ряд на узких экранах */
+    body {
+        font-size: 16px; /* Уменьшаем шрифт для мобильных устройств */
     }
 
-    .product {
-        padding: 20px;
+    h1 {
+        font-size: 24px; /* Уменьшение заголовков для мобильных устройств */
+    }
+
+    .product h3 {
+        font-size: 18px;
+    }
+
+    .product p {
+        font-size: 14px;
     }
 
     .btn, .quantity-btn {
-        padding: 8px 16px;
-        font-size: 16px;
+        padding: 8px 15px; /* Уменьшение кнопок для мобильных */
     }
 }
