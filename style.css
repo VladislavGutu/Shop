@@ -1,62 +1,70 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-size: 18px;
-	color: var(--tg-theme-text-color);
-	background: var(--tg-theme-bg-color);
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: var(--tg-theme-text-color);
+    background: var(--tg-theme-bg-color);
 }
 
 .container {
-	max-width: 390px;
+    width: 400px; /* Устанавливаем ширину 400px */
+    margin: 0 auto; /* Центрируем контейнер */
 }
 
 .inner {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 200px 200px 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два товара в ряд */
+    grid-gap: 10px; /* Пробел между товарами */
 }
 
-.img {
-	width: 150px;
+.product {
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.item {
-	text-align: center;
+.product-img {
+    width: 100px; /* Размер изображения */
+    height: auto;
 }
 
-.btn {
-	display: inline-block;
-	padding: 10px 20px;
-	border: none;
-	background: rgb(248, 168, 24);
-	border-radius: 10px;
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: 700;
-
-	transition: background .2s linear;
+.btn, .quantity-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background: rgb(248, 168, 24);
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background .2s linear;
 }
 
 .btn:hover {
-	background: lightgreen;
+    background: lightgreen;
+}
+
+.quantity-btn {
+    padding: 5px 10px;
+    margin: 5px;
+    background: #2cab37;
+    font-size: 18px;
+}
+
+.quantity-display {
+    display: inline-block;
+    margin: 5px 10px;
+    font-weight: bold;
 }
 
 .usercard {
-	text-align: center;
+    text-align: center;
+    margin-top: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.cart-img {
+    width: 50px;
+    height: auto;
+}
