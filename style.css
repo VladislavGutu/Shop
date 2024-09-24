@@ -2,23 +2,17 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Две карточки в ряд */
   width: 100%;
-  max-width: 500px; /* Ограничили ширину контейнера */
+  max-width: 500px; /* Общая ширина для двух карточек */
   justify-content: center;
   justify-items: center;
-  column-gap: 20px; /* Отступ между колонками */
-  row-gap: 30px; /* Отступ между рядами */
+  column-gap: 30px; /* Отступ между колонками */
+  row-gap: 40px; /* Отступ между рядами */
   margin: 0 auto;
 }
 
 .card {
-  width: 200px; /* Немного уменьшили ширину карточки */
-  min-height: 320px; /* Слегка уменьшили высоту */
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  border-radius: 4px;
-  transition: 0.2s;
-  position: relative;
+  width: 200px; /* Уменьшили ширину карточки */
+  min-height: 320px; /* Пропорционально уменьшили высоту */
 }
 
 .card__top {
