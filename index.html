@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Магазин Нипплов</title>
 </head>
@@ -14,78 +16,175 @@
     <main>
         <section id="products" class="container">
             <h2>Наши Нипплы</h2>
-            <div class="inner"> <!-- Добавляем блок с классом inner -->
-                <div class="product" id="product1">
-                    <img src="burger.jpg" alt="Ниппл 1" class="product-img">
-                    <h3>Ниппл 1</h3>
-                    <p>Описание ниппла 1.</p>
-                    <span class="price">$10.00</span>
-                    <div class="quantity-controls">
-                        <button class="quantity-btn" onclick="decreaseQuantity(1)">-</button>
-                        <span id="quantity1">1</span>
-                        <button class="quantity-btn" onclick="increaseQuantity(1)">+</button>
+            <div class="cards">
+                <!-- Карточка товара -->
+                <div class="card">
+                  <!-- Верхняя часть -->
+                  <div class="card__top">
+                    <!-- Изображение-ссылка товара -->
+                    <a href="#" class="card__image">
+                      <img
+                        src="burger.jpg"
+                        alt="Apple IPhone 14 PRO Max Gold"
+                      />
+                    </a>
+                    <!-- Скидка на товар -->
+                    <div class="card__label">-10%</div>
+                  </div>
+                  <!-- Нижняя часть -->
+                  <div class="card__bottom">
+                    <!-- Цены на товар (с учетом скидки и без)-->
+                    <div class="card__prices">
+                      <div class="card__price card__price--discount">135 000</div>
+                      <div class="card__price card__price--common">150 000</div>
                     </div>
-                    <button class="btn" id="btn1" onclick="addToCart(1)">Добавить в корзину</button>
+                    <!-- Ссылка-название товара -->
+                    <a href="#" class="card__title">
+                      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
+                    </a>
+                    <!-- Кнопка добавить в корзину -->
+                    <button class="card__add">В корзину</button>
+                  </div>
                 </div>
-                <div class="product" id="product2">
-                    <img src="burger.jpg" alt="Ниппл 2" class="product-img">
-                    <h3>Ниппл 2</h3>
-                    <p>Описание ниппла 2.</p>
-                    <span class="price">$12.00</span>
-                    <div class="quantity-controls">
-                        <button class="quantity-btn" onclick="decreaseQuantity(2)">-</button>
-                        <span id="quantity2">1</span>
-                        <button class="quantity-btn" onclick="increaseQuantity(2)">+</button>
+                <div class="card">
+                  <!-- Верхняя часть -->
+                  <div class="card__top">
+                    <!-- Изображение-ссылка товара -->
+                    <a href="#" class="card__image">
+                      <img
+                        src="burger.jpg"
+                        alt="Apple IPhone 14 PRO Max Gold"
+                      />
+                    </a>
+                    <!-- Скидка на товар -->
+                    <div class="card__label">-10%</div>
+                  </div>
+                  <!-- Нижняя часть -->
+                  <div class="card__bottom">
+                    <!-- Цены на товар (с учетом скидки и без)-->
+                    <div class="card__prices">
+                      <div class="card__price card__price--discount">135 000</div>
+                      <div class="card__price card__price--common">150 000</div>
                     </div>
-                    <button class="btn" id="btn2" onclick="addToCart(2)">Добавить в корзину</button>
+                    <!-- Ссылка-название товара -->
+                    <a href="#" class="card__title">
+                      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
+                    </a>
+                    <!-- Кнопка добавить в корзину -->
+                    <button class="card__add">В корзину</button>
+                  </div>
                 </div>
-                <div class="product" id="product3">
-                    <img src="burger.jpg" alt="Ниппл 3" class="product-img">
-                    <h3>Ниппл 3</h3>
-                    <p>Описание ниппла 3.</p>
-                    <span class="price">$11.00</span>
-                    <div class="quantity-controls">
-                        <button class="quantity-btn" onclick="decreaseQuantity(3)">-</button>
-                        <span id="quantity3">1</span>
-                        <button class="quantity-btn" onclick="increaseQuantity(3)">+</button>
+                <div class="card">
+                  <!-- Верхняя часть -->
+                  <div class="card__top">
+                    <!-- Изображение-ссылка товара -->
+                    <a href="#" class="card__image">
+                      <img
+                        src="burger.jpg"
+                        alt="Apple IPhone 14 PRO Max Gold"
+                      />
+                    </a>
+                    <!-- Скидка на товар -->
+                    <div class="card__label">-10%</div>
+                  </div>
+                  <!-- Нижняя часть -->
+                  <div class="card__bottom">
+                    <!-- Цены на товар (с учетом скидки и без)-->
+                    <div class="card__prices">
+                      <div class="card__price card__price--discount">135 000</div>
+                      <div class="card__price card__price--common">150 000</div>
                     </div>
-                    <button class="btn" id="btn3" onclick="addToCart(3)">Добавить в корзину</button>
+                    <!-- Ссылка-название товара -->
+                    <a href="#" class="card__title">
+                      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
+                    </a>
+                    <!-- Кнопка добавить в корзину -->
+                    <button class="card__add">В корзину</button>
+                  </div>
                 </div>
-                <div class="product" id="product4">
-                    <img src="burger.jpg" alt="Ниппл 4" class="product-img">
-                    <h3>Ниппл 4</h3>
-                    <p>Описание ниппла 4.</p>
-                    <span class="price">$15.00</span>
-                    <div class="quantity-controls">
-                        <button class="quantity-btn" onclick="decreaseQuantity(4)">-</button>
-                        <span id="quantity4">1</span>
-                        <button class="quantity-btn" onclick="increaseQuantity(4)">+</button>
+                <div class="card">
+                  <!-- Верхняя часть -->
+                  <div class="card__top">
+                    <!-- Изображение-ссылка товара -->
+                    <a href="#" class="card__image">
+                      <img
+                        src="burger.jpg"
+                        alt="Apple IPhone 14 PRO Max Gold"
+                      />
+                    </a>
+                    <!-- Скидка на товар -->
+                    <div class="card__label">-10%</div>
+                  </div>
+                  <!-- Нижняя часть -->
+                  <div class="card__bottom">
+                    <!-- Цены на товар (с учетом скидки и без)-->
+                    <div class="card__prices">
+                      <div class="card__price card__price--discount">135 000</div>
+                      <div class="card__price card__price--common">150 000</div>
                     </div>
-                    <button class="btn" id="btn4" onclick="addToCart(4)">Добавить в корзину</button>
+                    <!-- Ссылка-название товара -->
+                    <a href="#" class="card__title">
+                      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
+                    </a>
+                    <!-- Кнопка добавить в корзину -->
+                    <button class="card__add">В корзину</button>
+                  </div>
                 </div>
-                <div class="product" id="product5">
-                    <img src="burger.jpg" alt="Ниппл 5" class="product-img">
-                    <h3>Ниппл 5</h3>
-                    <p>Описание ниппла 5.</p>
-                    <span class="price">$13.00</span>
-                    <div class="quantity-controls">
-                        <button class="quantity-btn" onclick="decreaseQuantity(5)">-</button>
-                        <span id="quantity5">1</span>
-                        <button class="quantity-btn" onclick="increaseQuantity(5)">+</button>
+                <div class="card">
+                  <!-- Верхняя часть -->
+                  <div class="card__top">
+                    <!-- Изображение-ссылка товара -->
+                    <a href="#" class="card__image">
+                      <img
+                        src="burger.jpg"
+                        alt="Apple IPhone 14 PRO Max Gold"
+                      />
+                    </a>
+                    <!-- Скидка на товар -->
+                    <div class="card__label">-10%</div>
+                  </div>
+                  <!-- Нижняя часть -->
+                  <div class="card__bottom">
+                    <!-- Цены на товар (с учетом скидки и без)-->
+                    <div class="card__prices">
+                      <div class="card__price card__price--discount">135 000</div>
+                      <div class="card__price card__price--common">150 000</div>
                     </div>
-                    <button class="btn" id="btn5" onclick="addToCart(5)">Добавить в корзину</button>
+                    <!-- Ссылка-название товара -->
+                    <a href="#" class="card__title">
+                      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
+                    </a>
+                    <!-- Кнопка добавить в корзину -->
+                    <button class="card__add">В корзину</button>
+                  </div>
                 </div>
-                <div class="product" id="product6">
-                    <img src="burger.jpg" alt="Ниппл 6" class="product-img">
-                    <h3>Ниппл 6</h3>
-                    <p>Описание ниппла 6.</p>
-                    <span class="price">$14.00</span>
-                    <div class="quantity-controls">
-                        <button class="quantity-btn" onclick="decreaseQuantity(6)">-</button>
-                        <span id="quantity6">1</span>
-                        <button class="quantity-btn" onclick="increaseQuantity(6)">+</button>
+                <div class="card">
+                  <!-- Верхняя часть -->
+                  <div class="card__top">
+                    <!-- Изображение-ссылка товара -->
+                    <a href="#" class="card__image">
+                      <img
+                        src="burger.jpg"
+                        alt="Apple IPhone 14 PRO Max Gold"
+                      />
+                    </a>
+                    <!-- Скидка на товар -->
+                    <div class="card__label">-10%</div>
+                  </div>
+                  <!-- Нижняя часть -->
+                  <div class="card__bottom">
+                    <!-- Цены на товар (с учетом скидки и без)-->
+                    <div class="card__prices">
+                      <div class="card__price card__price--discount">135 000</div>
+                      <div class="card__price card__price--common">150 000</div>
                     </div>
-                    <button class="btn" id="btn6" onclick="addToCart(6)">Добавить в корзину</button>
+                    <!-- Ссылка-название товара -->
+                    <a href="#" class="card__title">
+                      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
+                    </a>
+                    <!-- Кнопка добавить в корзину -->
+                    <button class="card__add">В корзину</button>
+                  </div>
                 </div>
             </div> <!-- Закрываем блок inner -->
         </section>
