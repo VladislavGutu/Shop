@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Две карточки в ряд */
   width: 100%;
-  max-width: 600px; /* Уменьшили ширину grid-контейнера */
+  max-width: 500px; /* Ограничили ширину контейнера */
   justify-content: center;
   justify-items: center;
   column-gap: 20px; /* Отступ между колонками */
@@ -11,8 +11,8 @@
 }
 
 .card {
-  width: 150px; /* Уменьшили ширину карточки */
-  min-height: 300px; /* Уменьшили высоту карточки */
+  width: 200px; /* Немного уменьшили ширину карточки */
+  min-height: 320px; /* Слегка уменьшили высоту */
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
 }
 
 .card__top {
-  flex: 0 0 150px; /* Уменьшили высоту карточки */
+  flex: 0 0 200px; /* Уменьшили высоту верхней части карточки */
   position: relative;
   overflow: hidden;
 }
@@ -43,17 +43,61 @@
   transition: 0.2s;
 }
 
-/* Остальные стили остались без изменений */
+/* Размещаем скидку на товар относительно изображения */
+.card__label {
+  padding: 4px 8px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #ff6633;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
 
 .card__bottom {
-  padding: 8px; /* Уменьшили padding для компактности */
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  padding: 10px;
 }
 
 .card__prices {
-  margin-bottom: 8px;
+  display: flex;
+  margin-bottom: 10px;
+  flex: 0 0 50%;
+}
+
+.card__price--discount {
+  font-weight: 700;
+  font-size: 17px; /* Немного уменьшили размер шрифта */
+  color: #414141;
+}
+
+.card__price--common {
+  font-weight: 400;
+  font-size: 15px; /* Уменьшили размер шрифта */
+  color: #606060;
+}
+
+.card__title {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 16px; /* Немного уменьшили шрифт */
+  line-height: 150%;
+  color: #414141;
 }
 
 .card__add {
-  font-size: 15px;
-  padding: 8px;
+  display: block;
+  font-size: 16px; /* Уменьшили шрифт */
+  color: #70c05b;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #70c05b;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: auto;
 }
