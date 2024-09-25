@@ -2,199 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <title>Магазин Нипплов</title>
 </head>
-<body>
-    <header>
-        <h1>Магазин Нипплов</h1>
-    </header>
+<body class="body">
+<header>
+    <h1>Магазин Нипплов</h1>
+</header>
 
-    <main>
-        <section id="products" class="container">
-            <h2>Наши Нипплы</h2>
-            <div class="cards">
-                <!-- Карточка товара -->
-                <div class="card">
-                  <!-- Верхняя часть -->
-                  <div class="card__top">
-                    <!-- Изображение-ссылка товара -->
+<main>
+    <section id="products" class="container">
+        <h2>Наши Нипплы</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card__top">
+                    <span class="card__sale">Sale</span>
                     <a href="#" class="card__image">
-                      <img
-                        src="burger.jpg"
-                        alt="Apple IPhone 14 PRO Max Gold"
-                      />
+                        <img src="burger.jpg" alt="Apple IPhone 14 PRO Max Gold"/>
                     </a>
-                    <!-- Скидка на товар -->
-                    <div class="card__label">-10%</div>
-                  </div>
-                  <!-- Нижняя часть -->
-                  <div class="card__bottom">
-                    <!-- Цены на товар (с учетом скидки и без)-->
-                    <div class="card__prices">
-                      <div class="card__price card__price--discount">135 000</div>
-                      <div class="card__price card__price--common">150 000</div>
-                    </div>
-                    <!-- Ссылка-название товара -->
-                    <a href="#" class="card__title">
-                      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
-                    </a>
-                    <!-- Кнопка добавить в корзину -->
-                    <button class="card__add">В корзину</button>
-                  </div>
                 </div>
-                <div class="card">
-                  <!-- Верхняя часть -->
-                  <div class="card__top">
-                    <!-- Изображение-ссылка товара -->
-                    <a href="#" class="card__image">
-                      <img
-                        src="burger.jpg"
-                        alt="Apple IPhone 14 PRO Max Gold"
-                      />
-                    </a>
-                    <!-- Скидка на товар -->
-                    <div class="card__label">-10%</div>
-                  </div>
-                  <!-- Нижняя часть -->
-                  <div class="card__bottom">
-                    <!-- Цены на товар (с учетом скидки и без)-->
-                    <div class="card__prices">
-                      <div class="card__price card__price--discount">135 000</div>
-                      <div class="card__price card__price--common">150 000</div>
+                <div class="card__title">iPhone 14 Pro Max</div>
+                <div class="card__description">Product description</div>
+                <div class="card__bottom">
+                    <div class="card__discount">
+                        <div class="card__price card__price--discount">135 000</div>
                     </div>
-                    <!-- Ссылка-название товара -->
-                    <a href="#" class="card__title">
-                      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
-                    </a>
-                    <!-- Кнопка добавить в корзину -->
-                    <button class="card__add">В корзину</button>
-                  </div>
-                </div>
-                <div class="card">
-                  <!-- Верхняя часть -->
-                  <div class="card__top">
-                    <!-- Изображение-ссылка товара -->
-                    <a href="#" class="card__image">
-                      <img
-                        src="burger.jpg"
-                        alt="Apple IPhone 14 PRO Max Gold"
-                      />
-                    </a>
-                    <!-- Скидка на товар -->
-                    <div class="card__label">-10%</div>
-                  </div>
-                  <!-- Нижняя часть -->
-                  <div class="card__bottom">
-                    <!-- Цены на товар (с учетом скидки и без)-->
-                    <div class="card__prices">
-                      <div class="card__price card__price--discount">135 000</div>
-                      <div class="card__price card__price--common">150 000</div>
+                    <div class="card__common">
+                        <div class="card__price card__price--common">150 000</div>
+                        <div class="card__price card__price--percent">-15%</div>
                     </div>
-                    <!-- Ссылка-название товара -->
-                    <a href="#" class="card__title">
-                      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
-                    </a>
-                    <!-- Кнопка добавить в корзину -->
-                    <button class="card__add">В корзину</button>
-                  </div>
-                </div>
-                <div class="card">
-                  <!-- Верхняя часть -->
-                  <div class="card__top">
-                    <!-- Изображение-ссылка товара -->
-                    <a href="#" class="card__image">
-                      <img
-                        src="burger.jpg"
-                        alt="Apple IPhone 14 PRO Max Gold"
-                      />
-                    </a>
-                    <!-- Скидка на товар -->
-                    <div class="card__label">-10%</div>
-                  </div>
-                  <!-- Нижняя часть -->
-                  <div class="card__bottom">
-                    <!-- Цены на товар (с учетом скидки и без)-->
-                    <div class="card__prices">
-                      <div class="card__price card__price--discount">135 000</div>
-                      <div class="card__price card__price--common">150 000</div>
-                    </div>
-                    <!-- Ссылка-название товара -->
-                    <a href="#" class="card__title">
-                      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
-                    </a>
-                    <!-- Кнопка добавить в корзину -->
-                    <button class="card__add">В корзину</button>
-                  </div>
-                </div>
-                <div class="card">
-                  <!-- Верхняя часть -->
-                  <div class="card__top">
-                    <!-- Изображение-ссылка товара -->
-                    <a href="#" class="card__image">
-                      <img
-                        src="burger.jpg"
-                        alt="Apple IPhone 14 PRO Max Gold"
-                      />
-                    </a>
-                    <!-- Скидка на товар -->
-                    <div class="card__label">-10%</div>
-                  </div>
-                  <!-- Нижняя часть -->
-                  <div class="card__bottom">
-                    <!-- Цены на товар (с учетом скидки и без)-->
-                    <div class="card__prices">
-                      <div class="card__price card__price--discount">135 000</div>
-                      <div class="card__price card__price--common">150 000</div>
-                    </div>
-                    <!-- Ссылка-название товара -->
-                    <a href="#" class="card__title">
-                      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
-                    </a>
-                    <!-- Кнопка добавить в корзину -->
-                    <button class="card__add">В корзину</button>
-                  </div>
-                </div>
-                <div class="card">
-                  <!-- Верхняя часть -->
-                  <div class="card__top">
-                    <!-- Изображение-ссылка товара -->
-                    <a href="#" class="card__image">
-                      <img
-                        src="burger.jpg"
-                        alt="Apple IPhone 14 PRO Max Gold"
-                      />
-                    </a>
-                    <!-- Скидка на товар -->
-                    <div class="card__label">-10%</div>
-                  </div>
-                  <!-- Нижняя часть -->
-                  <div class="card__bottom">
-                    <!-- Цены на товар (с учетом скидки и без)-->
-                    <div class="card__prices">
-                      <div class="card__price card__price--discount">135 000</div>
-                      <div class="card__price card__price--common">150 000</div>
-                    </div>
-                    <!-- Ссылка-название товара -->
-                    <a href="#" class="card__title">
-                      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
-                    </a>
-                    <!-- Кнопка добавить в корзину -->
-                    <button class="card__add">В корзину</button>
-                  </div>
-                </div>
-            </div> <!-- Закрываем блок inner -->
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Магазин Нипплов</p>
-    </footer>
+                </div>
+                <button class="card__add">В корзину</button>
+            </div>
+            <div class="card">
+                <div class="card__top">
+                    <span class="card__sale">Sale</span>
+                    <a href="#" class="card__image">
+                        <img src="burger.jpg" alt="Apple IPhone 14 PRO Max Gold"/>
+                    </a>
+                </div>
+                <div class="card__title">iPhone 14 Pro Max</div>
+                <div class="card__description">Product description</div>
+                <div class="card__bottom">
+                    <div class="card__discount">
+                        <div class="card__price card__price--discount">135 000</div>
+                    </div>
+                    <div class="card__common">
+                        <div class="card__price card__price--common">150 000</div>
+                        <div class="card__price card__price--percent">-15%</div>
+                    </div>
 
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="app.js"></script>
+                </div>
+                <button class="card__add">В корзину</button>
+            </div>
+            <div class="card">
+                <div class="card__top">
+                    <span class="card__sale">Sale</span>
+                    <a href="#" class="card__image">
+                        <img src="burger.jpg" alt="Apple IPhone 14 PRO Max Gold"/>
+                    </a>
+                </div>
+                <div class="card__title">iPhone 14 Pro Max</div>
+                <div class="card__description">Product description</div>
+                <div class="card__bottom">
+                    <div class="card__discount">
+                        <div class="card__price card__price--discount">135 000</div>
+                    </div>
+                    <div class="card__common">
+                        <div class="card__price card__price--common">150 000</div>
+                        <div class="card__price card__price--percent">-15%</div>
+                    </div>
+
+                </div>
+                <button class="card__add">В корзину</button>
+            </div>
+            <div class="card">
+                <div class="card__top">
+                    <span class="card__sale">Sale</span>
+                    <a href="#" class="card__image">
+                        <img src="burger.jpg" alt="Apple IPhone 14 PRO Max Gold"/>
+                    </a>
+                </div>
+                <div class="card__title">iPhone 14 Pro Max</div>
+                <div class="card__description">Product description</div>
+                <div class="card__bottom">
+                    <div class="card__discount">
+                        <div class="card__price card__price--discount">135 000</div>
+                    </div>
+                    <div class="card__common">
+                        <div class="card__price card__price--common">150 000</div>
+                        <div class="card__price card__price--percent">-15%</div>
+                    </div>
+
+                </div>
+                <button class="card__add">В корзину</button>
+            </div>
+        </div> <!-- Закрываем блок inner -->
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Магазин Нипплов</p>
+</footer>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
