@@ -1,31 +1,72 @@
+.body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Две карточки в ряд */
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  max-width: 500px; /* Общая ширина для двух карточек */
+  max-width: 600px;
   justify-content: center;
+  column-gap: -10px; /* Adjust this value as needed */
   justify-items: center;
-  column-gap: 30px; /* Отступ между колонками */
-  row-gap: 40px; /* Отступ между рядами */
+  row-gap: 15px; /* Adjust this value as needed */
   margin: 0 auto;
 }
 
 .card {
-  width: 200px; /* Уменьшили ширину карточки */
-  min-height: 320px; /* Пропорционально уменьшили высоту */
+  width: 200px;
+  min-height: 300px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+  position: relative;
+  border-radius: 24px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .card__top {
-  flex: 0 0 200px; /* Уменьшили высоту верхней части карточки */
+  flex: 0 0 200px;
   position: relative;
   overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card__title {
+  padding: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card__sale {
+  position: absolute;
+  text-transform: uppercase;
+
+  background-image: linear-gradient(to bottom right, #ff2b51, #ff0101);
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.card__description {
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #858585;
 }
 
 .card__image {
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -37,61 +78,58 @@
   transition: 0.2s;
 }
 
-/* Размещаем скидку на товар относительно изображения */
-.card__label {
-  padding: 4px 8px;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: #ff6633;
-  border-radius: 4px;
-  font-weight: 400;
-  font-size: 16px;
-  color: #fff;
-}
-
 .card__bottom {
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 auto;
-  padding: 10px;
-}
-
-.card__prices {
-  display: flex;
-  margin-bottom: 10px;
-  flex: 0 0 50%;
-}
-
-.card__price--discount {
-  font-weight: 700;
-  font-size: 17px; /* Немного уменьшили размер шрифта */
-  color: #414141;
+  padding: 4px;
 }
 
 .card__price--common {
-  font-weight: 400;
-  font-size: 15px; /* Уменьшили размер шрифта */
-  color: #606060;
+  text-decoration: line-through;
+}
+.card__discount {
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.card__title {
-  margin-bottom: 10px;
-  font-weight: 400;
-  font-size: 16px; /* Немного уменьшили шрифт */
-  line-height: 150%;
-  color: #414141;
+.card__common {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.card__price--common{
+  font-weight: bold;
+
+    color: #858585;
+}
+.card__price--percent {
+  padding: 2px 6px;
+  box-shadow: black 0 0 4px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: white;
+  background-image: linear-gradient(to bottom right, #ff2b51, #ff0101);
 }
 
 .card__add {
-  display: block;
-  font-size: 16px; /* Уменьшили шрифт */
-  color: #70c05b;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+
   padding: 10px;
-  text-align: center;
-  border: 1px solid #70c05b;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.2s;
+  width: auto;
   margin-top: auto;
+
+  border: none;
+  border-radius: 20px;
+  transform: translateY(15%);
+  box-shadow: black 0 0 7px;
+
+  background-image: linear-gradient(to bottom right, #bdecb6, #036c56);
+}
+
+.card__add:active {
+  background-image: linear-gradient(to bottom right, #ff2b51, #ff0101);
+  color: white;
 }
